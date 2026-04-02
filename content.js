@@ -448,13 +448,13 @@ function doScrollNext() {
     const video = document.querySelector('video');
     if (video && video.paused && !video.dataset.pausedByExtension) video.play().catch(()=>{});
 
-    // 1. Try finding the standard "Down" arrow in the feed
+    // 1. Try finding the standard "Down" arrow in the feed (for TV mode or specific layouts)
     const btnDown = document.querySelector('[data-e2e="arrow-right"]') || document.querySelector('button[data-e2e="video-switch-next"]');
     if (btnDown) {
         _logScroll("Found next button, clicking it.");
         btnDown.click();
     } else {
-        // 2. Try the keyboard fallback (ArrowDown)
+        // 2. Try the keyboard fallback (ArrowDown) targeting a valid DOM element with a tagName
         _logScroll("Next button not found, trying KeyboardEvent (ArrowDown).");
         const e = new KeyboardEvent('keydown', { 
             key: 'ArrowDown', 
@@ -463,46 +463,45 @@ function doScrollNext() {
             which: 40, 
             bubbles: true, 
             cancelable: true,
-            composed: true
+            composed: true,
+            view: window
         });
         
-        // Dispatch strictly on document.body. React checks event.target.tagName.toLocaleLowerCase()
-        document.body.dispatchEvent(e);
-        _logScroll("Keyboard event dispatched on BODY");
+        // Dispatch strictly on the closest feed container or #app, it must have a tagName to not crash React
+        const targetElement = (video ? video.closest('[data-e2e="recommend-list-item-container"]') : null) 
+                            || document.getElementById('app') 
+                            || document.documentElement; // html has a tagname
+                            
+        targetElement.dispatchEvent(e);
+        _logScroll("Keyboard event dispatched on: " + targetElement.tagName);
         
-        // 3. Ultimate Fallback: Instant Direct scroll & Wheel Fire
+        // 3. Fallback: Emulate TikTok App scrollBy
         setTimeout(() => {
             const v = document.querySelector('video');
             if (v) {
-                // Fire wheel event aggressively (TikTok's react engine highly respects Mouse Wheels)
                 const wheelEvent = new WheelEvent('wheel', {
-                    deltaY: 500,
-                    deltaX: 0,
-                    deltaZ: 0,
-                    deltaMode: 0,
+                    deltaY: 1000,
                     bubbles: true,
                     cancelable: true,
-                    composed: true
+                    composed: true,
+                    view: window
                 });
                 
-                // Usually the player container listens to the wheel event
                 const container = v.closest('[data-e2e="recommend-list-item-container"]') || v.closest('div[class*="DivItemContainer"]');
+                const feedWrapper = document.querySelector('[data-e2e="recommend-list-item-container"]')?.parentElement || document.getElementById('app');
                 
-                if (container) {
-                    _logScroll("Wheel event dispatched on container.");
-                    container.dispatchEvent(wheelEvent);
-                    
-                    if (container.nextElementSibling) {
-                        _logScroll("Direct DOM Scroll Fallback (Instant) triggered.");
-                        // DO NOT USE 'smooth' -> Chrome pauses smooth scrolling in background tabs!!
-                        container.nextElementSibling.scrollIntoView({ behavior: 'auto', block: 'end' });
-                    }
-                } else {
-                    _logScroll("Wheel event dispatched on body.");
-                    document.body.dispatchEvent(wheelEvent);
+                if (feedWrapper) {
+                    _logScroll("Wheel event dispatched on feed parent.");
+                    feedWrapper.dispatchEvent(wheelEvent);
+                }
+                
+                // Final safety: Native scrollTo override
+                if (container && container.nextElementSibling) {
+                    _logScroll("Native scrollBy fallback executed.");
+                    container.parentElement.scrollBy({ top: window.innerHeight, behavior: 'auto' });
                 }
             }
-        }, 100); // Trigger quickly (100ms)
+        }, 150);
     }
     
     setTimeout(() => { _scrollCooldown = false; }, 2000); // 2 second cooldown
