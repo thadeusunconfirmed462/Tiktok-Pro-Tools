@@ -1,83 +1,67 @@
 # 🎵 TikTok Pro Tools - Chrome Extension
 
-Extension Chrome nâng cao trải nghiệm TikTok với 5 tính năng chính.
+[![Download Extension](https://img.shields.io/badge/Download_Extension-Download_ZIP-success?style=for-the-badge&logo=googlechrome)](https://github.com/diepvantien/Tiktok-Pro-Tools/archive/refs/heads/main.zip)
+
+A powerful Chrome extension that enhances your TikTok web experience with essential tools for audio, video, and UI customization.
 
 ---
 
-## ✨ Tính năng
+## ✨ Features
 
-| Tính năng | Mô tả |
-|-----------|-------|
-| ⏯ **Phát trong nền** | Video TikTok tiếp tục phát khi bạn chuyển sang tab khác |
-| ⚡ **Tốc độ 0-4x** | Thanh kéo mượt từ 0 đến 4x, có preset nhanh (0.5x / 1x / 1.5x / 2x) |
-| 🔊 **Âm lượng** | Điều chỉnh âm lượng bất kỳ mức nào từ 0% đến 100% |
-| 🎵 **Shazam** | Nhận diện tên bài hát đang phát trong video (cần RapidAPI Key) |
-| 🎨 **Custom Theme** | 6 giao diện: Mặc định, Dark Pro, Neon Pink, Midnight Blue, Sunset, Forest + Custom |
-
----
-
-## 🚀 Cài đặt
-
-### Bước 1: Tải và giải nén
-Giải nén file `tiktok-pro-tools.zip` ra một thư mục.
-
-### Bước 2: Mở Chrome Extensions
-Truy cập `chrome://extensions/` trên Chrome.
-
-### Bước 3: Bật Developer Mode
-Bật công tắc **"Developer mode"** ở góc trên bên phải.
-
-### Bước 4: Load Extension
-Nhấn **"Load unpacked"** → Chọn thư mục vừa giải nén.
-
-### Bước 5: Sử dụng
-Truy cập [TikTok.com](https://tiktok.com) — panel điều khiển sẽ xuất hiện ở góc phải màn hình.
+- ⏯ **Background Play**: Keep TikTok videos playing even when you switch to another tab.
+- ⚡ **0-4x Video Speed**: Fine-tune playback speed from 0 to 4x, with quick presets (0.5x / 1x / 1.5x / 2x).
+- 🔊 **Volume Control**: Adjust the audio volume precisely from 0% to 100%.
+- 🎛️ **Advanced EQ & Audio Filters**: Customize your sound with presets like Bass Boost, Treble Boost, Vocal Boost, EDM, Lo-Fi, 3D Audio, and Night Mode.
+- 🎵 **Music Recognition (Shazam)**: Identify the song playing in the video (requires a free RapidAPI Key).
+- 🎨 **Custom Themes**: Personalize the extension UI with themes like Default, Dark Pro, Neon Pink, Midnight Blue, Sunset, Forest, and Custom.
+- 🧹 **Clean Mode & UI Tools**: Enhance the viewing experience by removing clutter and optimizing fonts.
 
 ---
 
-## 🎵 Cài đặt Shazam API
+## 🚀 Installation Guide
 
-1. Truy cập [RapidAPI Shazam](https://rapidapi.com/apidojo/api/shazam)
-2. Đăng ký tài khoản (miễn phí)
-3. Subscribe gói **Basic (free)** — 500 requests/tháng
-4. Mở popup extension → Tab **Shazam** → Nhập `X-RapidAPI-Key`
-5. Nhấn **Lưu API Key**
+### Step 1: Download the Extension
+Click the green **Download Extension** button above to download the `.zip` file, then extract it to a folder on your computer.
 
----
+### Step 2: Open Chrome Extensions
+Open Google Chrome and navigate to `chrome://extensions/`.
 
-## 🎮 Cách dùng Panel
+### Step 3: Enable Developer Mode
+Toggle the **"Developer mode"** switch located in the top right corner of the page.
 
-Panel điều khiển nổi ở góc phải TikTok:
-- **Kéo thả** header để di chuyển panel
-- **−** để thu nhỏ panel
-- Thanh kéo **Tốc độ**: từ 0x đến 4x với các nút preset nhanh
-- Thanh kéo **Âm lượng**: từ 0% đến 100%
-- Nút **Nhận diện nhạc**: ghi âm 5 giây và nhận diện qua Shazam
+### Step 4: Load the Extension
+Click **"Load unpacked"** and select the folder you extracted in Step 1.
+
+### Step 5: Start Using!
+Go to [TikTok.com](https://tiktok.com) and the floating control panel will appear on the right side of the screen.
 
 ---
 
-## ⚙️ Popup Settings
+## 🎵 Setting Up the Shazam API
 
-Nhấn icon extension trên toolbar để mở popup:
-- Tab **Cài đặt**: Bật/tắt phát nền, tốc độ/âm lượng mặc định, chọn theme
-- Tab **Shazam**: Nhập và lưu RapidAPI Key
-- Tab **Về**: Thông tin extension
-
----
-
-## 🔧 Yêu cầu
-
-- Chrome 88+ (Manifest V3)
-- Kết nối internet (để tải font & Shazam API)
-- RapidAPI Key (chỉ cần cho tính năng Shazam)
+1. Visit [RapidAPI Shazam](https://rapidapi.com/apidojo/api/shazam).
+2. Sign up for a free account.
+3. Subscribe to the **Basic (free)** plan (500 requests/month).
+4. Open the extension popup -> Go to the **Shazam** tab -> Enter your `X-RapidAPI-Key`.
+5. Click **Save API Key**.
 
 ---
 
-## 📝 Lưu ý
+## ☕ Author & Support
 
-- **Phát nền**: Hoạt động bằng cách chặn sự kiện `visibilitychange` mà TikTok dùng để tạm dừng video
-- **Shazam**: Ghi âm 5 giây từ video element; nếu TikTok chặn CORS, có thể cần tải lại trang
-- Extension không thu thập dữ liệu người dùng
+Created by **diepvantien**. If you find this extension helpful, please consider supporting the development!
+
+[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/diepvantien) 
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/diepvantien)
+
+**Email:** tiengroup38@gmail.com
+
+---
+
+## 📝 Disclaimer
+
+- **Background Play**: Works by intercepting visibility events that TikTok uses to pause playback.
+- **Privacy First**: This extension does not collect or store any of your personal user data.
 
 ---
 
