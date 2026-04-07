@@ -1,14 +1,12 @@
 
 const _realCreateElement = document.createElement;
-document.createElement = new Proxy(_realCreateElement, {
-    apply(target, thisArg, argumentsList) {
-        const el = Reflect.apply(target, thisArg, argumentsList);
-        if (argumentsList[0] && String(argumentsList[0]).toLowerCase() === 'video') {
-            el.crossOrigin = "anonymous";
-        }
-        return el;
+document.createElement = function(tagName, options) {
+    const el = _realCreateElement.call(this, tagName, options);
+    if (tagName.toLowerCase() === 'video') {
+        el.crossOrigin = "anonymous";
     }
-});
+    return el;
+};
 
 // TikTok Pro Tools - Script Injected into Web Context
 const _realPlay = HTMLVideoElement.prototype.play;
@@ -18,18 +16,17 @@ function getTrueVisibility() {
     return _realVisGetter ? _realVisGetter.call(document) : document.visibilityState;
 }
 
-HTMLVideoElement.prototype.play = new Proxy(_realPlay, {
-    apply(target, thisArg, argumentsList) {
-        return Reflect.apply(target, thisArg, argumentsList).catch(err => {
-            if (err.name === 'NotAllowedError' && getTrueVisibility() === 'hidden') {
-                thisArg.muted = true;
-                thisArg.dataset.tptAutoMuted = 'true';
-                return Reflect.apply(target, thisArg, argumentsList).catch(()=>{});
-            }
-            throw err;
-        });
-    }
-});
+HTMLVideoElement.prototype.play = function() {
+    return _realPlay.call(this).catch(err => {
+        // Only swallow and force-mute if we are in a background tab
+        if (err.name === 'NotAllowedError' && getTrueVisibility() === 'hidden') {
+            this.muted = true;
+            this.dataset.tptAutoMuted = 'true';
+            return _realPlay.call(this).catch(()=>{});
+        }
+        throw err; // Let TikTok's own UI handle foreground play-blocking
+    });
+};
 
 /* Web Audio API Interceptor for EQ and 360 Audio */
 const _realCreateMediaElementSource = AudioContext.prototype.createMediaElementSource || webkitAudioContext.prototype.createMediaElementSource;
@@ -57,10 +54,8 @@ window.addEventListener('tpt-eq-update', (e) => {
     });
 });
 
-AudioContext.prototype.createMediaElementSource = new Proxy(_realCreateMediaElementSource, {
-    apply(target, thisArg, argumentsList) {
-        const mediaElement = argumentsList[0];
-        const sourceNode = Reflect.apply(target, thisArg, argumentsList);
+AudioContext.prototype.createMediaElementSource = function(mediaElement) {
+    const sourceNode = _realCreateMediaElementSource.call(this, mediaElement);
     
     try {
         const bassNode = this.createBiquadFilter();
@@ -122,7 +117,6 @@ AudioContext.prototype.createMediaElementSource = new Proxy(_realCreateMediaElem
     }
     
     return sourceNode;
-    }
-});
+};
 // Trigger custom event just in case content.js needs to know about this script
 window.dispatchEvent(new CustomEvent('tpt-hook-ready'));
